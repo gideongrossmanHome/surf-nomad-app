@@ -20,7 +20,7 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
           />
         );
-      case "Surf Buddies":
+      case "Travel Buddies":
         return (
           <Icon
             name="user-run2x"
@@ -30,6 +30,36 @@ class DrawerItem extends React.Component {
             style={{ opacity: 0.5 }}
           />
         );
+        case "Hire a Photographer":
+          return (
+            <Icon
+              name="camera-compact2x"
+              family="NowExtra"
+              size={18}
+              color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+              style={{ opacity: 0.5 }}
+            />
+          );
+          case "Hire an Instructor":
+            return (
+              <Icon
+                name="profile-circle"
+                family="NowExtra"
+                size={18}
+                color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+                style={{ opacity: 0.5 }}
+              />
+            );
+        case "Find Gear":
+          return (
+            <Icon
+              name="basket2x"
+              family="NowExtra"
+              size={18}
+              color={focused ? nowTheme.COLORS.PRIMARY : "white"}
+              style={{ opacity: 0.5 }}
+            />
+          );
       case "Your Trips":
         return (
           <Icon

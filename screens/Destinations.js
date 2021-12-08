@@ -36,7 +36,7 @@ class Home extends React.Component {
   render() {
     return (
       <Block flex center style={styles.home}>
-        <Block center width="80%">
+        <Block center width={"80%"}>
           {this.renderSearch()}
         </Block>
         {this.renderArticles()}
