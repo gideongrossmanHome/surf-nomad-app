@@ -19,6 +19,11 @@ class DropDown extends React.Component {
     onSelect && onSelect(index, value);
   };
 
+  componentDidMount() {
+    const value = this.props.initialValue;
+    this.setState({ value });
+  }
+
   render() {
     const {
       onSelect,
@@ -84,12 +89,12 @@ const styles = StyleSheet.create({
   },
   text: {
     color: nowTheme.COLORS.WHITE,
-    fontWeight: '600'
+    fontWeight: '600',
   },
   dropdown: {
     marginTop: 8,
     marginLeft: -16,
-    width: 100
+    width: 100,
   }
 });
 

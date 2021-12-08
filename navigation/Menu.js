@@ -26,6 +26,13 @@ function CustomDrawerContent({
 }) {
   const insets = useSafeArea();
   const screens = [
+    "Destinations",
+    "Travel Buddies",
+    "Your Trips",
+    "Find Gear",
+    "Hire a Photographer",
+    "Hire an Instructor",
+    "Profile",
     "Home",
     "Components",
     "Articles",

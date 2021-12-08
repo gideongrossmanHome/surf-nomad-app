@@ -11,6 +11,10 @@ import Profile from '../screens/Profile';
 import Register from '../screens/Register';
 import Components from '../screens/Components';
 import Articles from '../screens/Articles';
+import Destinations from '../screens/Destinations';
+import Buddies from '../screens/Buddies';
+import Gear from '../screens/Gear';
+import Photographers from '../screens/Photographers';
 import Onboarding from '../screens/Onboarding';
 import SettingsScreen from '../screens/Settings';
 // drawer
@@ -35,6 +39,56 @@ function ComponentsStack(props) {
   );
 }
 
+function DestinationsStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Destinations" mode="card" headerMode="screen">
+      <Stack.Screen name="Destinations" component={Destinations} options={{
+        header:({ navigation, scene }) => (<Header title="Destinations" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
+      }}/>
+    </Stack.Navigator>
+  );
+}
+function BuddiesStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Buddies" mode="card" headerMode="screen">
+      <Stack.Screen name="Buddies" component={Buddies} options={{
+        header:({ navigation, scene }) => (<Header title="Find Travel Buddies" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
+      }}/>
+    </Stack.Navigator>
+  );
+}
+function GearStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Gear" mode="card" headerMode="screen">
+      <Stack.Screen name="Gear" component={Gear} options={{
+        header:({ navigation, scene }) => (<Header title="Find Travel Gear" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
+      }}/>
+    </Stack.Navigator>
+  );
+}
+function InstructorsStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Instructors" mode="card" headerMode="screen">
+      <Stack.Screen name="Instructors" component={Gear} options={{
+        header:({ navigation, scene }) => (<Header title="Instructors" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
+      }}/>
+    </Stack.Navigator>
+  );
+}
+function PhotographersStack(props) {
+  return (
+    <Stack.Navigator initialRouteName="Photographers" mode="card" headerMode="screen">
+      <Stack.Screen name="Photographers" component={Photographers} options={{
+        header:({ navigation, scene }) => (<Header title="Photographers" navigation={navigation} scene={scene} />),
+        backgroundColor: "#FFFFFF"
+      }}/>
+    </Stack.Navigator>
+  );
+}
 function ArticlesStack(props) {
   return (
     <Stack.Navigator initialRouteName="Articles" mode="card" headerMode="screen">
@@ -180,6 +234,11 @@ function AppStack(props) {
       }}
       initialRouteName="Home"
     >
+      <Drawer.Screen name="Destinations" component={DestinationsStack} />
+      <Drawer.Screen name="Travel Buddies" component={BuddiesStack}/>
+      <Drawer.Screen name="Find Gear" component={GearStack}/>
+
+      <Drawer.Screen name="Hire a Photographer" component={PhotographersStack}/>
       <Drawer.Screen name="Home" component={HomeStack} />
       <Drawer.Screen name="Components" component={ComponentsStack} />
       <Drawer.Screen name="Articles" component={ArticlesStack} />
