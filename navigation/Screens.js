@@ -232,7 +232,7 @@ function AppStack(props) {
           fontWeight: "normal"
         }
       }}
-      initialRouteName="Home"
+      initialRouteName="Destinations"
     >
       <Drawer.Screen name="Destinations" component={DestinationsStack} />
       <Drawer.Screen name="Travel Buddies" component={BuddiesStack}/>
